@@ -1,5 +1,5 @@
 * {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	box-sizing: border-box;
 }
 html,
@@ -8,7 +8,7 @@ body,
 .app {
 	margin: 0;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 }
 
 nav {
@@ -78,8 +78,125 @@ nav {
 	}
 }
 
-input {
-	&:focus {
-		outline: none;
+.global-error {
+	background: $notHorribleRed;
+	width: 100%;
+	position: absolute;
+	top: 48px;
+	left: 0;
+	z-index: 1;
+	padding: 10px;
+	font-size: 12px;
+	transition: top 0.2s;
+	span {
+		color: white;
+		svg {
+			margin-right: 5px;
+		}
+	}
+}
+
+.slide-in {
+	top: 83px;
+}
+
+.auth-container {
+	background: $color2;
+	color: white;
+	height: 100%;
+	section {
+		height: 100%;
+		padding: 120px 20px 80px 20px;
+		overflow: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	form {
+		width: 350px;
+		.login-error-message {
+			height: 40px;
+			text-align: center;
+			padding: 10px;
+			border-radius: 3px;
+			color: $notHorribleRed;
+		}
+		.info {
+			display: flex;
+			flex-direction: column;
+			margin: 20px 0;
+			width: 100%;
+
+			label {
+				margin-bottom: 20px;
+				font-size: 12px;
+			}
+			.error-message {
+				margin-bottom: 30px;
+				font-size: 12px;
+				color: $notHorribleRed;
+				margin-top: 4px;
+				text-align: right;
+				min-height: 15px;
+			}
+			input {
+				background: none;
+				border: 0;
+				border-bottom: 1px solid white;
+				color: white;
+				width: 100%;
+				padding: 5px;
+				font-size: 20px;
+			}
+		}
+		.submit {
+			width: 100%;
+
+			input {
+				width: 100%;
+				height: 50px;
+				background-color: $color3;
+				box-shadow: none;
+				border: 0;
+				color: white;
+				cursor: pointer;
+				&:hover {
+					opacity: 0.9;
+				}
+			}
+		}
+	}
+}
+
+.form-container {
+	max-width: 500px;
+	form {
+		background: none;
+		display: flex;
+		margin-bottom: 10px;
+		input {
+			padding: 10px;
+			border-radius: 20px;
+		}
+		input[name="text"] {
+			flex: 5;
+			border: 0;
+			margin-right: 5px;
+			background-color: white;
+			&:focus {
+				outline: none;
+			}
+		}
+		input[type="submit"] {
+			cursor: pointer;
+			flex: 1;
+			border: 1px solid white;
+			background-color: $color3;
+			color: white;
+			&:focus {
+				outline: none;
+			}
+		}
 	}
 }

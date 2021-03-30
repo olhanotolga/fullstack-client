@@ -50,6 +50,7 @@ $notHorribleRed: rgb(116, 33, 206);
 		background: $color3;
 		color: white;
 		height: 100%;
+		overflow: auto;
 
 		section {
 			height: 100%;
@@ -69,6 +70,7 @@ $notHorribleRed: rgb(116, 33, 206);
 					border-radius: 10px;
 					justify-content: space-between;
 					cursor: pointer;
+					
 					&:hover {
 						opacity: 0.9;
 					}
@@ -80,6 +82,10 @@ $notHorribleRed: rgb(116, 33, 206);
 							margin-left: 10px;
 						}
 					}
+				}
+				.checked {
+					text-decoration: line-through;
+					opacity: 0.5;
 				}
 			}
 		}
